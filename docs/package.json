@@ -4,9 +4,9 @@
   "private": true,
   "description": "turbo.build",
   "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "build": "next build ",
+    "dev": "node init && next",
+    "start": "node init && next start",
+    "build": "node init && next build ",
     "lint": "next lint",
     "rss": "node scripts/generate-rss.js",
     "schema": "turbo-types-generate ./public/schema.json"

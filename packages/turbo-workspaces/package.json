@@ -16,8 +16,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "node init && tsup",
+    "dev": "node init && tsup --watch",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
     "check-types": "tsc --noEmit"

@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev --no-cache --continue",
+    "build": "node init && turbo build",
+    "dev": "node init && turbo dev --no-cache --continue",
     "lint": "turbo lint",
     "clean": "turbo clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

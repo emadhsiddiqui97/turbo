@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "pnpm -- turbo run build --filter=docs",
-    "build:turbo": "pnpm run --filter=cli build",
-    "build:ts": "tsc -b tsconfig.project.json",
+    "build": "node init && pnpm -- turbo run build --filter=docs",
+    "build:turbo": "node init && pnpm run --filter=cli build",
+    "build:ts": "node init && tsc -b tsconfig.project.json",
     "check:prettier": "prettier -c .",
     "check:toml": "taplo format --check",
     "format": "run-p format:prettier format:rs format:toml",

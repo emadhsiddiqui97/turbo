@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "clean": "make clean",
-    "build": "make",
+    "build": "node init && make",
     "test": "make test-go",
     "format": "make fmt-go",
     "lint": "make lint-go"

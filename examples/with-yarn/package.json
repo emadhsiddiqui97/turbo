@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev --parallel",
+    "build": "node init && turbo build",
+    "dev": "node init && turbo dev --parallel",
     "lint": "turbo lint"
   },
   "devDependencies": {

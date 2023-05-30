@@ -20,7 +20,7 @@
   "main": "dist/index.js",
   "bin": "dist/index.js",
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
     "check-types": "tsc --noEmit"

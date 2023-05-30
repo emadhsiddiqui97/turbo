@@ -1,24 +1,23 @@
 {
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "eslint.packageManager": "pnpm",
-  "debug.javascript.unmapMissingSources": true,
-  "go.lintTool": "golangci-lint",
-  "files.associations": {
-    "libturbo.h": "c",
-    "turbo.json": "jsonc"
-  },
-  "[cram]": {
-    "editor.trimAutoWhitespace": false,
-    "files.trimFinalNewlines": false,
-    "files.insertFinalNewline": false,
-    "files.trimTrailingWhitespace": false
-  },
   "search.exclude": {
-    "crates/turbopack-tests/tests/snapshot/**": true
+    "**/.sst": true
+  },
+  "task.allowAutomaticTasks": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "debug.openDebug": "neverOpen",
+  "problems.autoReveal": true,
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.inheritEnv": false,
+  "jestrunner.configPath": "jest.unit.config.cjs",
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
   }
 }

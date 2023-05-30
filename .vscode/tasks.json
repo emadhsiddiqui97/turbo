@@ -1,39 +1,36 @@
 {
   "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}"
+  },
   "tasks": [
     {
+      "label": "folder-open",
+      "dependsOn": ["eslint-check"],
       "runOptions": {
         "runOn": "folderOpen"
       },
-      "label": "Compile protobufs",
-      "type": "shell",
-      "options": {
-        "cwd": "${workspaceRoot}/cli"
+      "hide": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "eslint-check",
+      "type": "process",
+      "command": "sh",
+      "args": [".vscode/eslint-check.sh"],
+      "windows": {
+        "command": "cmd.exe",
+        "args": ["/d", "/c", ".vscode\\eslint-check.cmd"]
       },
+      "isBackground": true,
+      "hide": true,
+      "problemMatcher": [],
       "presentation": {
-        "reveal": "silent"
-      },
-      "command": "make compile-protos"
-    },
-    {
-      "type": "shell",
-      "label": "prepare e2e",
-      "dependsOn": ["make turbo", "make install"]
-    },
-    {
-      "type": "shell",
-      "command": "cd ${cwd}/cli && make install",
-      "label": "make install"
-    },
-    {
-      "type": "shell",
-      "command": "cd ${cwd}/cli && make turbo",
-      "label": "make turbo"
-    },
-    {
-      "type": "shell",
-      "label": "prepare turbo",
-      "command": "cargo build -p turbo"
+        "reveal": "never",
+        "panel": "dedicated",
+        "echo": false,
+        "close": true
+      }
     }
   ]
 }
